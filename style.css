@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+.container div:nth-child(1) {
+    background-image: url("./assets/images/stadium1.png");
+}
+.container div:nth-child(2) {
+    background-image: url("./assets/images/stadium2.png");
+}
+.container div:nth-child(3) {
+    background-image: url("./assets/images/stadium3.png");
+}
+.container div:nth-child(4) {
+    background-image: url("./assets/images/stadium4.png");
+}
+.container div:nth-child(5) {
+    background-image: url("./assets/images/stadium5.png");
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden;
+    margin: 0;
+    background-image: url("./assets/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    width: 80vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 1s ease-in-out;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.panel h5 {
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    bottom: -40px;
+    color: #fff;
+    opacity: 1;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out 1s;
+    cursor: auto;
+}
+
+.panel.active h5 {
+    bottom: -90px;
+    color: #fff;
+    opacity: 1;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out 1s;
+    cursor: auto;
+}
